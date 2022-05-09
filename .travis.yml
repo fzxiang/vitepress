@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - lts/*
+  - 16
 
 cache:
   npm: false
@@ -17,7 +17,7 @@ install:
 
 script: 
   - pnpm docs:build
-  
+
 deploy: 
   provider: pages
   skip_cleanup: true
