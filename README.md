@@ -8,7 +8,7 @@ Here is the list of available scripts that can be used during the development.
 # Boot local dev server.
 $ npm run dev
 
-# Build demo, then serve locally. This is for testing
+# Build doc, then serve locally. This is for testing
 # production build in the local environment.
 $ npm run serve
 
