@@ -7,13 +7,14 @@ on:
 jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [15]
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        - uses: actions/checkout@v2
+        - uses: pnpm/action-setup@v2.0.1
 
       - name: Use Node.js ${{ matrix.node-version }}  
         uses: actions/setup-node@v2
