@@ -4,6 +4,7 @@ const path = require('path')
 module.exports = (async () => {
   const base = await getBase()
   return {
+    base: '/vitepress',
     ...base,
 
     vite: {
